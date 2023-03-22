@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'RedHatText'; /*a name to be used later*/
+    src: url('../../css/fonts/RedHatText-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'RedHatTextMedium'; /*a name to be used later*/
+    src: url('../../css/fonts/RedHatText-Medium.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'RedHatTextBold'; /*a name to be used later*/
+    src: url('../../css/fonts/RedHatText-Bold.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'RedHatDisplay'; /*a name to be used later*/
+    src: url('../../css/fonts/RedHatDisplay-VariableFont_wght.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'RedHatTextVariable'; /*a name to be used later*/
+    src: url('../../css/fonts/RedHatText-VariableFont_wght.ttf'); /*URL to font*/
+}
+
+body {
+    font-family: "RedHatText", sans-serif;
+    font-weight: 400;
+}
+
+.heading-primary {
+   
+    text-transform: capitalize;
+    font-family: "RedHatDisplay";
+    font-size: 5.2rem;
+    line-height: 6rem;
+    margin-bottom: 4rem;
+    animation: moveInLeft 1s ease-out;
+}
+
+.heading-secondary {
+   
+    font-size: 2.2rem; 
+    margin-bottom: 4rem; 
+    
+    animation: moveInRight 1s ease-out;
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $color-grey;
+}

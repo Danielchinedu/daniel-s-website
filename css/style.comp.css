@@ -1,0 +1,174 @@
+/*
+  0 - 600px:      Phone
+  600 - 900px:    Tablet portrait
+  900 - 1200px:   Tablet landscape
+  [1200 - 1800] is where our normal styles apply
+  1800px + :      Big desktop
+  
+  $breakpoint arguement choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+  
+  ORDER: Base + typography > general layout + grid > page layout > components
+  
+  1em = 16px
+  */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 0; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+::selection {
+  background-color: #0090B7;
+  color: #fff; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-hug {
+  margin-top: 10rem !important; }
+
+.header {
+  height: 75vh;
+  background-image: url("../img/header.png");
+  background-size: cover;
+  padding: 8rem 10rem 0 10rem; }
+  @media only screen and (max-width: 75em) {
+    .header {
+      height: 75vh;
+      padding: 8rem 5rem 0 5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      height: 60vh;
+      padding: 4rem 5rem 0 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      height: 60vh;
+      padding: 3rem 4rem 0 4rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      height: 80vh;
+      padding: 1rem 1rem 0 1rem; } }
+  .header__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative; }
+  .header__text-section {
+    align-self: center; }
+  .header__image-section {
+    align-self: flex-end;
+    animation: moveInRight 2s ease-out; }
+    @media only screen and (max-width: 56.25em) {
+      .header__image-section {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__image-section {
+        display: none; } }
+  .header-img {
+    width: 980px;
+    height: 580px; }
+    @media only screen and (max-width: 93.75em) {
+      .header-img {
+        width: 680px;
+        height: 420px; } }
+    @media only screen and (max-width: 75em) {
+      .header-img {
+        width: 500px;
+        height: 300px; } }
+    @media only screen and (max-width: 56.25em) {
+      .header-img {
+        width: 400px;
+        height: 200px; } }
+  .header__btn {
+    margin-bottom: 6rem; }
+  .header__social {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media only screen and (max-width: 93.75em) {
+      .header__social {
+        width: 20%; } }
+    @media only screen and (max-width: 75em) {
+      .header__social {
+        width: 25%; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__social {
+        width: 35%; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__social {
+        width: 45%; } }

@@ -1,0 +1,58 @@
+.home {
+  margin: 150px 200px 0 200px;
+  &_content {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &_content {
+    &--text--head-primary {
+      margin-top: 80px;
+      color: whitesmoke;
+      font-size: 32px;
+      animation: moveInLeft 1.5s ease-out;
+    }
+    &--text--head-secondary {
+        margin-top: 12px;
+      font-size: 56px;
+      font-weight: 700;
+      color: whitesmoke;
+      animation: moveInRight 1.5s ease-out;
+    }
+    &--text--head-tertiary {
+        margin-top: 3px;
+        font-weight: 700;
+      font-size: 32px;
+      color: whitesmoke;
+      animation: moveInRight 1.5s ease-out;
+     &--span{
+      color: blueviolet;
+     }
+    }
+    &--text--paragraph {
+        margin-top: 20px;
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: whitesmoke;
+    }
+  }
+  &_social-media{
+   gap: 10px;
+   display: inline-flex;
+   margin-top: 20px;
+   margin-bottom: 17px;
+  }
+}
+.home_social-media--icon:hover {
+  transform: scale(1.11);
+  transition: 0.2s;
+}
+#dan-img {
+  width: 400px;
+  height: 450px;
+  border-radius: 100px;
+  border: 10px solid blueviolet;
+  animation: zoomin 2s ease-out forwards, ;
+  
+  box-shadow: 0 4px 25px 0 blueviolet;
+}

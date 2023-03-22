@@ -1,0 +1,272 @@
+.navigation {
+    display: flex;
+    padding: 0 18rem;
+    height: 7rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+
+    @include respond(tab-land) {
+        padding: 2.5rem 4.6rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 2rem 4.6rem;
+    }
+
+    @include respond(phone) {
+        padding: 1.8rem 4rem;
+    }
+
+    @include respond(small-phone) {
+        padding: 1.4rem 2rem;
+    }
+
+    &__logo {
+        @include respond(big-desktop) {
+            flex-basis: 30%;
+        }
+
+        &--text {
+            font-size: 30px;
+            cursor: default;
+            color: whitesmoke;
+            vertical-align: middle;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+    }
+
+    &__icon {
+        display: none;
+        position: relative;
+
+        @include respond(tab-port) {
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: 2px;
+                background-color: whitesmoke;
+                display: inline-block;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition:  all .2s;
+            }
+
+            &::before { top: -.8rem; }
+            &::after { top: .8rem; }
+        }
+    }
+
+    &_button:hover &_icon::before {
+        top: -1rem;
+    }
+
+    &_button:hover &_icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked ~ &__list {
+        @include respond(tab-port) {
+            left: 0;
+        }
+    }
+
+    &__checkbox:checked ~ &__list &__item &__link {
+        &:link,
+        &:visited {
+            margin-left: 0px;
+        }
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        // @include respond(big-desktop) {
+        //     flex-basis: 55%;
+        // }
+
+        @include respond(tab-port) {
+            position: fixed;
+            top: 60px;
+            left: -100%;
+            background: blueviolet;
+            height: 40vh;
+            width: 100%;
+            text-align: center;
+            display: block;
+            transition: all 0.3s ease;
+            z-index: 4;
+        }
+    }
+
+    &__item {
+        display: inline;
+        margin: 0 0.5rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin: 40px 0;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        box-shadow: 0 .3em 1.2em rgba(0, 0, 0, 0.15);
+        background-color: $color-white;
+
+        padding-left: -1.5rem;
+        width: 24rem;
+
+        @include respond(tab-port) {
+            position: static;
+        }
+    }
+
+    &__item-hover {
+        position: relative;
+    }
+
+    &__item-hover::before {
+        content: "";
+        position: absolute;
+        top: 98%;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: blueviolet;
+        transform: scaleX(0);
+        transition: transform .2s;
+    }
+
+    &__item:hover::before {
+        transform: scaleX(1);
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.7rem;
+            color: whitesmoke;
+            padding: .8rem 1.5rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        &:not(:only-child)::after {
+            padding-left: .4em;
+            content: ' ▾';
+        }
+
+        @include respond(tab-port) {
+            &:link,
+            &:visited {
+                width: 100%;
+                margin-left: -100%;
+                display: block;
+                font-size: 20px;
+                color: #fff;
+                transition: all .4s;
+            }
+
+            &:hover,
+            &:active {
+                color: $color-primary;
+                background-color: $color-white;
+            }
+        }
+
+        &--btn {
+            color: $color-white !important;
+
+            @include respond(tab-port) {
+                color: $color-black !important;
+                display: none !important;
+            }
+        }
+    }
+}
+
+#nav-toggle {
+    position: absolute;
+    left: 1.8em;
+    top: 2.2em;
+    cursor: pointer;
+    padding: 1em 3.5em 1.6em 0;
+
+    span,
+    span:before,
+    span:after {
+        cursor: pointer;
+        border-radius: .1em;
+        height: .5em;
+        width: 3.5em;
+        background: $color-primary;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+    }
+
+    span:before {
+        top: -1em;
+    }
+
+    span:after {
+        bottom: -1em;
+    }
+
+    &.active span {
+        background-color: transparent;
+
+        &:before,
+        &:after {
+            top: 0;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+}
