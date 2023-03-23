@@ -26,7 +26,16 @@
       color: whitesmoke;
       animation: moveInRight 1.5s ease-out;
      &--span{
-      color: blueviolet;
+      color: transparent;
+      background-image: linear-gradient(blueviolet,rgb(189, 138, 236));
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      font-size: 40px;
+      font-weight: 2000;
+      background-position: -750px 0;
+      animation: backcolor 5s linear infinite alternate;
+      transition: 2s;
+      //-webkit-text-stroke: 1px whitesmoke;
      }
     }
     &--text--paragraph {
@@ -55,4 +64,22 @@
   animation: zoomin 2s ease-out forwards, ;
   
   box-shadow: 0 4px 25px 0 blueviolet;
+}
+.bg_video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio:16/9) {
+  .bg_video{
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio:16/9) {
+  .bg_video{
+    width: auto;
+    height: 100%;
+  }
 }

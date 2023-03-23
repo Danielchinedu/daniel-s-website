@@ -72,6 +72,13 @@
         transform: translateY(0);
     }
 }
+@keyframes backcolor {
+  
+
+    100% {
+        background-position: 0 0;
+    }
+}
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-25rem * 7))}
