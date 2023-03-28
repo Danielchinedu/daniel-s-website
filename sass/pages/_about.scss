@@ -1,0 +1,29 @@
+.about__text {
+    margin-top: 70px;
+  &--heading {
+    text-align: center;
+    color: purple;
+    font-size: 35px;
+    &-primary{
+       
+        color: purple;
+        margin-left: 200px;
+        font-size: 30px;
+        line-height: 200%;
+    }
+    &-text{
+        display: flex;
+        margin-top: 35px;
+        gap: 40px;
+    }
+  }
+  &--paragraph{
+    color: whitesmoke;
+    line-height: 200%;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  &--list{
+    margin-left: 100px;
+  }
+}
