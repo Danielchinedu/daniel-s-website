@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#050816">
-    <meta name="description" content="Chinedu Daniel — developer and visual creator building modern digital experiences.">
+    <meta name="description" content="Chinedu Daniel — developer and visual creator building modern digital products and experiences.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-c.css">
     <link rel="stylesheet" href="css/theme.css">
@@ -14,50 +13,71 @@
 </head>
 <body>
     <nav class="navigation" aria-label="Primary navigation">
-        <div class="navigation__logo">
-            <h1 class="navigation__logo--text">Daniel<span style="color:#00d9ff">.</span></h1>
-        </div>
+        <div class="navigation__logo"><h1 class="navigation__logo--text">Daniel<span style="color:#00d9ff">.</span></h1></div>
         <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
-        <label for="navi-toggle" class="navigation__button" aria-label="Toggle navigation">
-            <span class="navigation__icon">&nbsp;</span>
-        </label>
+        <label for="navi-toggle" class="navigation__button" aria-label="Toggle navigation"><span class="navigation__icon">&nbsp;</span></label>
         <ul class="navigation__list">
-            <li class="navigation__item navigation__item-hover"><a href="index.html" class="navigation__link">Home</a></li>
-            <li class="navigation__item navigation__item-hover"><a href="./clients.html" class="navigation__link">About</a></li>
-            <li class="navigation__item navigation__item-hover"><a href="./news.html" class="navigation__link">Skills</a></li>
-            <li class="navigation__item navigation__item-hover"><a href="./about-us.html" class="navigation__link">Portfolio</a></li>
-            <li class="navigation__item navigation__item-hover"><a href="./contact-us.html" class="navigation__link">Contact</a></li>
+            <li class="navigation__item navigation__item-hover"><a href="#home" class="navigation__link">Home</a></li>
+            <li class="navigation__item navigation__item-hover"><a href="#about" class="navigation__link">About</a></li>
+            <li class="navigation__item navigation__item-hover"><a href="#work" class="navigation__link">Work</a></li>
+            <li class="navigation__item navigation__item-hover"><a href="#skills" class="navigation__link">Skills</a></li>
+            <li class="navigation__item navigation__item-hover"><a href="#contact" class="navigation__link">Contact</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="home" aria-labelledby="hero-title">
+        <section class="home" id="home" aria-labelledby="hero-title">
             <div class="home_content">
                 <div class="home_content--text">
                     <h3 class="home_content--text--head-primary">Hello, I'm</h3>
                     <h1 id="hero-title" class="home_content--text--head-secondary">Chinedu Daniel</h1>
                     <h2 class="home_content--text--head-tertiary">I build <span class="home_content--text--head-tertiary--span">digital experiences</span></h2>
-                    <p class="home_content--text--paragraph">Developer, visual creator and problem solver crafting modern web experiences where thoughtful design meets clean technology.</p>
-
+                    <p class="home_content--text--paragraph">Developer, visual creator and problem solver crafting modern products where thoughtful design meets clean technology.</p>
                     <div class="home_social-media" aria-label="Social links">
-                        <a href="https://www.linkedin.com/in/chinedu-daniel-5a0596262/" class="home_social-media--icon" aria-label="LinkedIn">
-                            <img src="./img/linkin.png" alt="">
-                        </a>
-                        <a href="https://github.com/Danielchinedu" class="home_social-media--icon" aria-label="GitHub">
-                            <span style="color:#fff;font-size:20px;font-weight:800">GH</span>
-                        </a>
+                        <a href="https://www.linkedin.com/in/chinedu-daniel-5a0596262/" class="home_social-media--icon" aria-label="LinkedIn"><img src="./img/linkin.png" alt=""></a>
+                        <a href="https://github.com/Danielchinedu" class="home_social-media--icon" aria-label="GitHub"><span style="color:#fff;font-size:20px;font-weight:800">GH</span></a>
                     </div>
-
-                    <a href="./contact-us.html" class="btn btn--animated btn--primary">Let's build something</a>
+                    <a href="#work" class="btn btn--animated btn--primary">Explore my work</a>
                 </div>
-
-                <div class="home-img" aria-hidden="true">
-                    <img src="./img/dan.jpg" id="dan-img" alt="Chinedu Daniel">
-                </div>
+                <div class="home-img" aria-hidden="true"><img src="./img/dan.jpg" id="dan-img" alt="Chinedu Daniel"></div>
             </div>
+        </section>
+
+        <section class="portfolio-section" id="about">
+            <div class="section-kicker">01 / ABOUT</div>
+            <div class="section-heading"><h2>Turning ideas into <span>useful products.</span></h2><p>I combine frontend development, visual design and product thinking to create interfaces that feel polished, fast and intentional.</p></div>
+            <div class="about-grid">
+                <article class="glass-card about-card"><span class="card-number">01</span><h3>Build</h3><p>Responsive web experiences with modern JavaScript, React and Next.js.</p></article>
+                <article class="glass-card about-card"><span class="card-number">02</span><h3>Design</h3><p>Clean visual systems, interfaces and interactions designed around real users.</p></article>
+                <article class="glass-card about-card"><span class="card-number">03</span><h3>Imagine</h3><p>Exploring AI, education technology and digital products with practical impact.</p></article>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="work">
+            <div class="section-kicker">02 / SELECTED WORK</div>
+            <div class="section-heading"><h2>Projects with <span>purpose.</span></h2><p>A selection of products and experiments from my development journey.</p></div>
+            <div class="project-grid">
+                <a class="project-card project-card--featured" href="https://github.com/Danielchinedu" target="_blank" rel="noreferrer"><div class="project-glow"></div><div class="project-meta"><span>01</span><span>EDTECH</span></div><h3>GradeFlow</h3><p>A modern school results workflow designed to make score entry, approval and reporting simpler.</p><span class="project-link">View project ↗</span></a>
+                <a class="project-card" href="https://github.com/Danielchinedu" target="_blank" rel="noreferrer"><div class="project-meta"><span>02</span><span>EDUCATION</span></div><h3>Learnix</h3><p>A student-focused platform for learning, course resources and campus community.</p><span class="project-link">Explore ↗</span></a>
+                <a class="project-card" href="https://github.com/Danielchinedu" target="_blank" rel="noreferrer"><div class="project-meta"><span>03</span><span>STUDIO</span></div><h3>Zenith Solutions</h3><p>Digital products, websites and creative technology built with a practical business mindset.</p><span class="project-link">Explore ↗</span></a>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="skills">
+            <div class="section-kicker">03 / TOOLKIT</div>
+            <div class="section-heading"><h2>Tools I use to <span>make things happen.</span></h2></div>
+            <div class="skills-cloud" aria-label="Technology skills">
+                <span>JavaScript</span><span>React</span><span>Next.js</span><span>React Native</span><span>HTML</span><span>CSS</span><span>SCSS</span><span>Figma</span><span>Git</span><span>GitHub</span><span>Firebase</span><span>Cloudinary</span>
+            </div>
+        </section>
+
+        <section class="portfolio-section contact-panel" id="contact">
+            <div><div class="section-kicker">04 / CONTACT</div><h2>Have an idea worth building?</h2><p>Let's turn it into a product people enjoy using.</p></div>
+            <a href="./contact-us.html" class="btn btn--primary">Start a conversation ↗</a>
         </section>
     </main>
 
+    <footer class="portfolio-footer"><span>© 2026 Chinedu Daniel</span><span>Design by Daniel.</span></footer>
     <script src="js/3d-portfolio.js" defer></script>
 </body>
 </html>
