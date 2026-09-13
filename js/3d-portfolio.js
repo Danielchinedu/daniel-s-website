@@ -18,7 +18,7 @@
     if (!active) return;
     currentX += (targetX - currentX) * 0.075;
     currentY += (targetY - currentY) * 0.075;
-    scene.style.transform = `rotateX(${currentY}deg) rotateY(${currentX}deg)`;
+    scene.style.transform = `translateZ(50px) rotateX(${currentY}deg) rotateY(${currentX}deg)`;
     portrait.style.transform = `translate3d(${currentX * -2.2}px, ${currentY * 2.2}px, 0)`;
     frame = requestAnimationFrame(render);
   };
